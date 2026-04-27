@@ -16,7 +16,7 @@ variable "project_name" {
 variable "region" {
   type        = string
   description = "Region de AWS donde se desplegarán los recursos"
-  defatul     = "us-east-1"
+  default     = "us-east-1"
 }
 
 variable "bucket_suffix" {
