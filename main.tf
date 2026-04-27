@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "main" {
- bucket = "myapp-dev-uploads"
+  bucket = "${var.project_name}-${var.environment}-${var.bucket_suffix}"
 
 
- tags = {
-   Environment = "dev"
-   Project     = "myapp"
-   ManagedBy   = "terraform"
- }
+  tags = {
+    Environment = var.environment
+    Project     = var.project_name
+    wManagedBy   = "terraform"
+  }
 }
